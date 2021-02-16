@@ -2,4 +2,16 @@
   <img src='https://bit.ly/3pyLUpj'>
 </div>
 
-<h1> Our names are <%= @random_pet_names %></h1>
+<% if @name %>
+<h1> Our names are <%= "#{@name} & #{@name}!" %></h1>
+<% else %>
+<h1> Our names are <%= @pet_names %></h1>
+<% end %>
+
+<form action="/named-cat">
+    <label for="name">New names:</label>
+    <input type="text" name="name">
+    
+    <button type="button">Submit</button>
+    <button type="submit">Submit</button>
+</form>
