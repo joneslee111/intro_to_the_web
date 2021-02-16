@@ -7,7 +7,5 @@ require 'sinatra'
   end
 
   get '/cat' do
-    "<div style='border: dashed red;'> 
-      <img src='https://bit.ly/3pyLUpj'> 
-    </div>"
+    erb(:index)
   end
